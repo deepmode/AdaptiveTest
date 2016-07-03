@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="clK-kC-W4Q">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Display ContentVC-->
+        <scene sceneID="Vw3-aG-Ybv">
+            <objects>
+                <viewController id="hew-va-skA" customClass="DisplayContentVC" customModule="AdaptiveTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="stH-8u-k3f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dhn-ye-fxO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q7a-6Y-YeU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="psb" translatesAutoresizingMaskIntoConstraints="NO" id="L8U-pN-JFd">
+                                <rect key="frame" x="20" y="0.0" width="560" height="560"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L8U-pN-JFd" secondAttribute="height" multiplier="1:1" id="1DG-Jb-grg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L8U-pN-JFd" firstAttribute="top" secondItem="Q7a-6Y-YeU" secondAttribute="topMargin" id="0GM-hn-u7P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L8U-pN-JFd" secondAttribute="trailing" id="2vF-xp-V8Y"/>
+                            <constraint firstItem="L8U-pN-JFd" firstAttribute="leading" secondItem="Q7a-6Y-YeU" secondAttribute="leadingMargin" id="cFq-bG-8yN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iad-Bm-byS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="DMH-s7-Hcz"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zv8-vc-ck2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2696" y="21"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="u8o-Vb-Q7B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V8U-AL-cdg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="V94-vf-ZHp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O7K-cS-Tkz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mJt-Xz-Fve" kind="relationship" relationship="rootViewController" id="kRd-Ux-Snd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJP-IK-5ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="80"/>
+        </scene>
+        <!--Hello World-->
+        <scene sceneID="a8J-0r-M7D">
+            <objects>
+                <viewController id="mJt-Xz-Fve" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x4H-GH-rIm"/>
+                        <viewControllerLayoutGuide type="bottom" id="AQd-kZ-XXs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6X6-e7-Zv0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSi-L0-fEj">
+                                <rect key="frame" x="282" y="285" width="37" height="30"/>
+                                <state key="normal" title="show"/>
+                                <connections>
+                                    <segue destination="hew-va-skA" kind="show" id="yWN-WL-2Vo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jSi-L0-fEj" firstAttribute="centerY" secondItem="6X6-e7-Zv0" secondAttribute="centerY" id="kQP-ep-oNW"/>
+                            <constraint firstItem="jSi-L0-fEj" firstAttribute="centerX" secondItem="6X6-e7-Zv0" secondAttribute="centerX" id="qsz-A2-eMS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello World" id="zaE-4h-3Kk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNn-bj-WlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="80"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iU1-4A-6Kz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="clK-kC-W4Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="NcQ-4z-bjp">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V8U-AL-cdg" kind="relationship" relationship="viewControllers" id="fSS-R8-Uco"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VT-Dq-pnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="psb" width="333" height="333"/>
+    </resources>
+</document>
